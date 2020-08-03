@@ -6,3 +6,4 @@
 5. Add book previw
 6. Trending books
 7. Blog text editor
+8. SEO || Make the website searchable on browser
