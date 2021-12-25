@@ -24,7 +24,7 @@ SECRET_KEY = '9#0m5_^@$ja72!rb_p^p0(#xh1@yk5$ep#!d!nz5y-y1mm)jp!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -83,14 +83,27 @@ WSGI_APPLICATION = 'BookPress.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'REGARGO',
-        'USER': 'postgres',
-        'PASSWORD': 'Smnssgsssc1!',
-        'HOST': 'localhost'
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'djangodatabase',
+        # 'USER': 'root',
+        # 'PASSWORD': '',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '80',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'REGARGO',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Smnssgsssc1!',
+#         'HOST': 'localhost'
+
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
